@@ -1,0 +1,34 @@
+<mvc:View
+    controllerName="sap.ui.demo.walkthrough.controller.HeroList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+      id="heroList"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      items="{
+         path : 'hero>/',
+         sorter : {
+            path : 'name',
+			group : false,
+            descending: true
+         }
+      }">
+      <headerToolbar>
+         <Toolbar>
+            <Title text="{i18n>heroListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" search=".onFilterHeroes"/>
+            <Button
+               id="helloDialogButton"
+               icon="sap-icon://world"
+               text="Check"
+               press=".checkServerConnection"
+               class="sapUiSmallMarginEnd"/>
+         </Toolbar>
+      </headerToolbar>
+      <items>
+         <ObjectListItem title="{hero>name} | {hero>team}" />
+      </items>
+   </List>
+</mvc:View>

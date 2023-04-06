@@ -1,0 +1,7 @@
+---
+applications:
+- name: sage-dev-node-deep-dive
+  buildpack: nodejs_buildpack
+  memory: 128M
+  disk_quota: 200M
+  path: .
